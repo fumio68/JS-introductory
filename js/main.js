@@ -1,3 +1,5 @@
 'use strict';
 
-window.alert(400 + 50);
+{
+  document.getElementById('choice').textContent = 500 + 500;
+}
