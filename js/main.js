@@ -1,10 +1,21 @@
 'use strict';
 
 {
-  function total(price) {
-    const tax = 0.1;
-    return price + price * tax;
+  function fizzbuzz(num) {
+    if(num % 3 === 0 && num % 5 === 0) {
+      return 'fizzbuzz';
+    } else if (num % 3 === 0) {
+      return 'fizz';
+    } else if (num % 5 === 0) {
+      return 'buzz';
+    } else {
+      return num;
+    }
   }
 
-  document.getElementById('output').textContent = 'コーーヒーメーカーの値段は' + total(8000) + '円（税込み）です';
+  let i = 1;
+  while(i <= 50) {
+    console.log(fizzbuzz(i));
+    i ++;
+  }
 }
