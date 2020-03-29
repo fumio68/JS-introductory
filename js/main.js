@@ -1,5 +1,9 @@
 'use strict';
 
 {
-  document.getElementById('choice').textContent = 500 + 500;
+  if(window.confirm('ゲームスタート！準備はいい？')){
+    console.log('ゲームを開始します');
+  } else {
+    console.log('ゲームを終了します');
+  }
 }
