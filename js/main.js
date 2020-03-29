@@ -1,21 +1,10 @@
 'use strict';
 
 {
-  function fizzbuzz(num) {
-    if(num % 3 === 0 && num % 5 === 0) {
-      return 'fizzbuzz';
-    } else if (num % 3 === 0) {
-      return 'fizz';
-    } else if (num % 5 === 0) {
-      return 'buzz';
-    } else {
-      return num;
-    }
-  }
-
-  let i = 1;
-  while(i <= 50) {
-    console.log(fizzbuzz(i));
-    i ++;
+  let todo = ['デザインカンプ', 'データ整理', '勉強会申し込み', '牛乳買う'];
+  todo.push('歯医者に行く');
+  for(let item of todo) {
+    const li = `<li>${item}</li>`;
+    document.getElementById('list').insertAdjacentHTML('beforeend', li);
   }
 }
