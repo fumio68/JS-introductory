@@ -1,16 +1,10 @@
 'use strict';
 
 {
-  let enemy = 100;
-  let count = 0;
-
-  window.alert('戦闘スタート！');
-
-  while(enemy > 0) {
-    const attack = Math.floor(Math.random() * 30) + 1;
-    console.log('モンスターに' + attack + 'のダメージ！');
-    enemy -= attack;
-    count += 1;
+  function total(price) {
+    const tax = 0.1;
+    return price + price * tax;
   }
-  console.log(count + '回でモンスターを倒した！');
+
+  document.getElementById('output').textContent = 'コーーヒーメーカーの値段は' + total(8000) + '円（税込み）です';
 }
