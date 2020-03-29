@@ -1,19 +1,13 @@
 'use strict';
 
 {
-  const number = Math.floor(Math.random() * 6);
-  const answer = parseInt(window.prompt('数当てゲーム。0〜5の数字を入力してね。'));
+  const hour = new Date().getHours();
 
-  let message;
-
-  if(answer === number) {
-    message = 'あたり！';
-  }else if(answer < number) {
-    message = '残念でした！もっと大きい';
-  }else if(answer > number ) {
-    message = '残念でした！もっと小さい';
+  if(hour >= 19 && hour < 21){
+    window.alert('お弁当30%OFF!');
+  }else if(hour === 9 || hour === 15) {
+    window.alert('お弁当1個買ったら1個おまけ！');
   }else {
-    message = '0〜5の数字で入力してね。';
+    window.alert('お弁当はいかがですか');
   }
-  window.alert(message);
 }
