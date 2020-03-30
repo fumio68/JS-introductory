@@ -1,21 +1,35 @@
-section img {
+.slide {
+  margin: 0 auto;
+  border: 1px solid #000;
+  width: 720px;
+  background-color: #000;
+}
+img {
   max-width: 100%;
 }
-.center {
-  margin: 0 auto;
-  max-width: 90%;
-  width: 500px;
+.toolbar {
+  overflow: hidden;
+  text-align: center;
 }
-ul {
+.nav {
   display: flex;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0;
 }
-li {
-  flex: 1 1 auto;
-  margin-right: 8px;
+#prev {
+  margin-right: 0.5rem;
+  width: 16px;
+  height: 16px;
+  background: url(../img/5-5/arrow-left.svg) no-repeat;
 }
-li:last-of-type {
-  margin-right: 0;
+#next {
+  margin-left: 0.5rem;
+  width: 16px;
+  height: 16px;
+  background: url(../img/5-5/arrow-right.svg) no-repeat;
+}
+
+#page {
+  color: aliceblue;
 }
