@@ -2,6 +2,9 @@
 
 {
   const images = ['img/5-5/image1.jpg', 'img/5-5/image2.jpg', 'img/5-5/image3.jpg', 'img/5-5/image4.jpg','img/5-5/image5.jpg'];
+  images.forEach(function(item,index) {
+    preloadImage(item);
+  });
   let current = 0;
 
   function changeImage(num) {
@@ -14,6 +17,11 @@
 
   function pageNum() {
     document.getElementById('page').textContent = `${current + 1}/${images.length}`;
+  }
+
+  function preloadImage(path) {
+    let imgTag = document.createElement('img');
+    imgTag.src = path;
   }
 
   pageNum();
