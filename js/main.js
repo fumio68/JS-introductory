@@ -1,12 +1,34 @@
 'use strict';
 
 {
-  document.getElementById('p1').textContent = Math.PI;
-  document.getElementById('floor').textContent = Math.floor(Math.PI);
+  function countdown(due) {
+    const now = new Date();
 
-  function point(num, digit) {
-    const mover = 10 ** digit;
-    return Math.floor(num * mover) / mover;
+    const rest = due.getTime() - now.getTime();
+    const sec = Math.floor(rest / 1000) % 60;
+    const min = Math.floor(rest / 1000 / 60) % 60;
+    const hours = Math.floor(rest / 1000 / 60 / 60) % 24;
+    const days = Math.floor(rest / 1000 / 60 / 60 / 24);
+    const count = [days,hours ,min ,sec];
+
+    return count;
   }
-  document.getElementById('output').textContent = point(Math.PI, 2);
+
+  let goal = new Date();
+  goal.setHours(23);
+  goal.setMinutes(59);
+  goal.setSeconds(59);
+
+  function recalc() {
+    const counter = countdown(goal);
+    const time = `${counter[1]}時間${counter[2]}分${counter[3]}秒`;
+    document.getElementById('timer').textContent = time;
+    refresh();
+  }
+
+  function refresh() {
+    setTimeout(recalc, 1000);
+  }
+
+  recalc();
 }
