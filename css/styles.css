@@ -1,18 +1,33 @@
-.submenu h3 {
-  margin: 0 0 1em 0;
+.list {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.list h2{
+  margin: 0 0 2em 0;
   font-size: 16px;
+  text-align: center;
+}
+.seminar {
+  float: left;
+  margin: 10px 10px 10px 0;
+  border: 1px solid #000;
+  padding: 4px;
+  width: 25%;
+}
+.check {
+  margin: 0;
+  padding: 8px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #23628f;
+  text-align: center;
   cursor: pointer;
-  color: #5e78c1;
 }
-.submenu h3:hover {
-  color: #b04188;
-  text-decoration: underline;
+.red {
+  background-color: #e33a6d;
 }
-.submenu ul {
-  margin: 0 0 1em 0;
-  list-style: none;
-  font-size: 14px;
-}
-.hidden {
-  display: none;
+.green {
+  background-color: #7bc52e;
 }
