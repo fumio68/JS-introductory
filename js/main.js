@@ -2,8 +2,8 @@
 
 {
   $(document).ready(function(){
-    $('.submenu h3').on('click', function(){
-      $(this).next().toggleClass('hidden')
+    $('#open_nav').on('click', function(){
+      $('#wrapper, #nav').toggleClass('show')
     });
   });
 }
